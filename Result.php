@@ -11,7 +11,8 @@ Your date of birth is: <?php echo $_POST["date"]; ?><br>
 Your website is: <?php echo $_POST["website"]; ?><br>
 Your gender is: <?php echo $_POST["gender"]; ?><br>
 Additional comments: <?php echo $_POST["comment"]; ?><br>
-<?php echo $_POST["pet"]; ?>!
+You like <?php echo $_POST["pet"]; ?>!<br>
+You have opted into:
 
 </body>
 </html>
