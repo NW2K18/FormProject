@@ -5,7 +5,7 @@
 .error {color: #FF0000;}
 </style>
 </head>
-<body>
+<body style="background-color:#E8D3B9;">
 <h1>Abstract Registration Form Ltd.</h1>
 
 <h2>Please input your details below:</h2>
