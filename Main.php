@@ -42,11 +42,11 @@ Gender:
 further menial registration forms
 to fill out. If you do not wish to hear from us about these forms,
 you may opt out by ticking the boxes below:</h2> <br>
-<input type="checkbox" id="form1" name="register" value="Mountain hiking">
+<input type="checkbox" id="form1" name="register1" value="No">
 <label for="form1"> I do not wish to hear from you regarding registration forms about mountain climbing activities</label><br>
-<input type="checkbox" id="form2" name="register" value="New video games">
+<input type="checkbox" id="form2" name="register2" value="No">
 <label for="form2"> I do not wish to hear from you regarding registration forms about new video games</label><br>
-<input type="checkbox" id="form3" name="register" value="All-you-can-eat buffets">
+<input type="checkbox" id="form3" name="register3" value="No">
 <label for="form3"> I do not wish to hear from you regarding registration forms about all-you-can-eat buffets</label><br><br>
 
 <label for="comment">Additional comments: </label>
