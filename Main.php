@@ -49,7 +49,7 @@ you may opt out by ticking the boxes below:</h2> <br>
 <input type="checkbox" id="form3" name="register" value="All-you-can-eat buffets">
 <label for="form3"> I do not wish to hear from you regarding registration forms about all-you-can-eat buffets</label><br><br>
 
-<label for="comment">Comment: </label>
+<label for="comment">Additional comments: </label>
 <textarea name="comment" id="comment" rows="5" cols="40"> </textarea><br><br>
 
 <input type="submit">

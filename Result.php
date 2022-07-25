@@ -15,6 +15,8 @@ Your favourite time of the day is: <?php echo $_POST["time"]; ?><br>
 You like <?php echo $_POST["pet"]; ?>!<br>
 <!-- TODO: Output this data type more specifically. -->
 You have opted into:
+<?php echo $_POST["register"]; ?><br>
+
 Additional comments: <?php echo $_POST["comment"]; ?><br>
 
 </body>
