@@ -15,8 +15,8 @@
 <input type="text" id="name" name="name"><br><br>
 
 <!-- Use a calender input type -->
-<label for="date">Date of Birth: </label>
-<input type="text" id="date" name="date"><br><br>
+Date of Birth:
+<input type="text" name="date"><br><br>
 
 <label for="email">E-mail: </label>
 <input type="text" id="email" name="email"><br><br>
@@ -26,9 +26,9 @@
 
 <!-- Have a text box for Other-->
 Gender:
-<input type="radio" name="gender" value="male">Male
-<input type="radio" name="gender" value="female">Female
-<input type="radio" name="gender" value="other">Other<br><br>
+<input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+<input type="radio" id="other" name="gender" value="other"><label for="other">Other</label><br><br>
 
 <label for="comment">Comment: </label>
 <textarea name="comment" id="comment" rows="5" cols="40"> </textarea><br><br>
@@ -42,9 +42,14 @@ Cats or Dogs?
 <!-- Checkboxes -->
 <h2>From time to time, we may wish to contact you about
 further menial registration forms
-to fill in. if you do not wish to hear from us about these forms,
+to fill out. If you do not wish to hear from us about these forms,
 you may opt out by ticking the boxes below:</h2> <br>
-
+<input type="checkbox" id="form1" name="register" value="Mountain hiking">
+<label for="form1"> I do not wish to hear from you regarding registration forms about mountain climbing activities</label><br>
+<input type="checkbox" id="form2" name="register" value="New video games">
+<label for="form2"> I do not wish to hear from you regarding registration forms about new video games</label><br>
+<input type="checkbox" id="form3" name="register" value="All-you-can-eat buffets">
+<label for="form3"> I do not wish to hear from you regarding registration forms about all-you-can-eat buffets</label><br><br>
 
 <input type="submit">
 
