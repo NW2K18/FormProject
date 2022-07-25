@@ -30,14 +30,12 @@ Gender:
 <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
 <input type="radio" id="other" name="gender" value="other"><label for="other">Other</label><br><br>
 
-<label for="comment">Comment: </label>
-<textarea name="comment" id="comment" rows="5" cols="40"> </textarea><br><br>
-
 <!-- Drop down box -->
-Cats or Dogs?
-<input type="radio" name="pet" value="Cats">Cats
-<input type="radio" name="pet" value="Dogs">Dogs
-<input type="radio" name="pet" value="Neither">Neither<br><br>
+<label for="pet">Cats or Dogs?</label>
+<select id="pet" name="pet">
+  <option value="Cats">Cats</option>
+  <option value="Dogs">Dogs</option>
+</select> <br><br>
 
 <!-- Checkboxes -->
 <h2>From time to time, we may wish to contact you about
@@ -50,6 +48,9 @@ you may opt out by ticking the boxes below:</h2> <br>
 <label for="form2"> I do not wish to hear from you regarding registration forms about new video games</label><br>
 <input type="checkbox" id="form3" name="register" value="All-you-can-eat buffets">
 <label for="form3"> I do not wish to hear from you regarding registration forms about all-you-can-eat buffets</label><br><br>
+
+<label for="comment">Comment: </label>
+<textarea name="comment" id="comment" rows="5" cols="40"> </textarea><br><br>
 
 <input type="submit">
 

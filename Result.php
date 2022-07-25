@@ -10,9 +10,9 @@ Your email address is: <?php echo $_POST["email"]; ?><br>
 Your date of birth is: <?php echo $_POST["date"]; ?><br>
 Your website is: <?php echo $_POST["website"]; ?><br>
 Your gender is: <?php echo $_POST["gender"]; ?><br>
-Additional comments: <?php echo $_POST["comment"]; ?><br>
 You like <?php echo $_POST["pet"]; ?>!<br>
 You have opted into:
+Additional comments: <?php echo $_POST["comment"]; ?><br>
 
 </body>
 </html>
