@@ -10,11 +10,12 @@
 
 <h2>Please input your details below:</h2>
 Fields with a * are required<br>
+<!-- Form starts here -->
 <form action="Result.php" method="post">
 
 <label for="name">Name: </label>
 <input type="text" id="name" name="name" placeholder="John Doe"
-required>*<br><br>
+required autofocus>*<br><br>
 
 <label for="date">Date of Birth:</label>
 <input type="date" id="date" name="date" min="1900-01-01" max="2021-12-31"
@@ -59,6 +60,9 @@ you may opt out by ticking the boxes below:</h2> <br>
 <textarea name="comment" id="comment" rows="5" cols="40"> </textarea><br><br>
 
 <input type="submit">
+<!-- TODO: Remove in finished code -->
+<input type="submit" formnovalidate="formnovalidate"
+  value="Submit without validation">
 
 </form>
 
