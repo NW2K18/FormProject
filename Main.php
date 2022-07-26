@@ -7,7 +7,6 @@
 </head>
 <body style="background-color:#E8D3B9;">
 
-<!-- TODO: Validation code to be written here -->
 <?php
 // Define variables and set to empty values
 $nameErr = $dateErr = $emailErr = $websiteErr = $genderErr = $petErr = "";
@@ -66,9 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (!empty($_POST["comment"])) {
-    $comment = $_POST["comment"];
+    $comment = test_input($_POST["comment"]);
   }
-
 }
 
 function test_input($data) {
@@ -81,7 +79,7 @@ function test_input($data) {
 
 <h1>Abstract Registration Form Ltd.</h1>
 <h2>Please input your details below:</h2>
-Fields with a * are required<br>
+<span class="error">Fields with a * are required</span><br>
 <!-- Form starts here -->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
@@ -101,22 +99,28 @@ Fields with a * are required<br>
 <input type="url" id="website" name="website" value="<?php echo $website;?>" placeholder="www.thejohnsite.com">
 <span class="error"><?php echo $websiteErr;?></span><br><br>
 
-<!-- TODO: Have a text box for Other & Validation for gender. Also save value upon validation. -->
+<!-- TODO: Have a text box for Other -->
 Gender:
-  <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
-  <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
-  <input type="radio" id="other" name="gender" value="other"><label for="other">Other</label>
+  <input type="radio" id="male" name="gender" value="male"
+    <?php if (isset($gender) && $gender=="male") echo "checked";?>><label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female"
+    <?php if (isset($gender) && $gender=="female") echo "checked";?>><label for="female">Female</label>
+  <input type="radio" id="other" name="gender" value="other"
+  <?php if (isset($gender) && $gender=="other") echo "checked";?>><label for="other">Other</label>
   <span class="error">* <?php echo $genderErr;?></span><br><br>
 
 <label for="time">Favourite time of the day:</label>
 <input type="time" id="time" name="time" value="<?php echo $time;?>"> <br><br>
 
-<!-- TODO: Have the initial value be blank. Also save value upon validation. -->
+<!-- TODO: Save value upon validation. -->
 <label for="pet">Cats or Dogs?</label>
 <select id="pet" name="pet">
-  <option value="Cats">Cats</option>
-  <option value="Dogs">Dogs</option>
-</select><span class="error">* <?php echo $petErr;?></span><br><br>
+  <option value=""></option>
+  <option value="Cats"
+    <?php if (isset($pet) && $pet=="Cats") echo "selected";?>>Cats</option>
+  <option value="Dogs"
+    <?php if (isset($pet) && $pet=="Dogs") echo "selected";?>>Dogs</option>
+</select><span class="error"> * <?php echo $petErr;?></span><br><br>
 
 <h2>From time to time, we may wish to contact you about
 further mundane registration forms
@@ -131,7 +135,8 @@ you may opt out by ticking the boxes below:</h2> <br>
 
 <!-- TODO: Add minimum and maximum values so textarea has a static size. -->
 <label for="comment">Additional comments: </label>
-<textarea name="comment" id="comment" value="<?php echo $comment;?>" rows="5" cols="40"> </textarea><br><br>
+<textarea name="comment" id="comment" rows="5" cols="40">
+<?php echo $comment;?></textarea><br><br>
 
 <input type="submit">
 <!-- TODO: Remove in finished code -->
