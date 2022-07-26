@@ -6,7 +6,8 @@
 <h1>Abstract Registration Form Ltd.</h1>
 
 <h2>Thank you for registering!</h2>
-Welcome <?php echo $_POST["name"]; ?><br>
+<?php foreach ($_SESSION as $parm => $value)  echo "$parm = '$value'\n"; ?>
+Welcome <?php echo $_SERVER["name"]; ?><br>
 Your email address is: <?php echo $_POST["email"]; ?><br>
 Your date of birth is: <?php echo $_POST["date"]; ?><br>
 Your website is: <?php echo $_POST["website"]; ?><br>

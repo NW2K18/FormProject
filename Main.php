@@ -8,6 +8,7 @@
 <body style="background-color:#E8D3B9;">
 
 <?php
+// session_start();
 // Define variables and set to empty values
 $nameErr = $dateErr = $emailErr = $websiteErr = $genderErr = $petErr = "";
 $name = $date = $email = $website = $gender = $time = $pet = $comment = "";
@@ -67,6 +68,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!empty($_POST["comment"])) {
     $comment = test_input($_POST["comment"]);
   }
+
+  if ($nameErr == "" && $dateErr == "" && $emailErr == "" && $websiteErr == "" && $genderErr == "" && $petErr == "") {
+   //<meta http-equiv="Refresh" content="0; url='Result.php'" />
+   // TODO: Put the Header in here once it is fixed.
+  }
+
+  // TODO: Redirect to next page with relevant data.
+  //header("Location: Result.php");
+   //exit;
+
 }
 
 function test_input($data) {
@@ -143,8 +154,6 @@ you may opt out by ticking the boxes below:</h2> <br>
 <input type="submit" formnovalidate="formnovalidate"
   value="Submit without validation">
 </form>
-
-<!-- TODO: If there are no errors, redirect to second page -->
 
 </body>
 </html>
