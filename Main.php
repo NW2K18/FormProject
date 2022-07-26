@@ -6,12 +6,15 @@
 </style>
 </head>
 <body style="background-color:#E8D3B9;">
-<h1>Abstract Registration Form Ltd.</h1>
 
+<!-- TODO: Validation code to be written here -->
+
+
+<h1>Abstract Registration Form Ltd.</h1>
 <h2>Please input your details below:</h2>
 Fields with a * are required<br>
 <!-- Form starts here -->
-<form action="Result.php" method="post">
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
 <label for="name">Name: </label>
 <input type="text" id="name" name="name" placeholder="John Doe"
@@ -26,7 +29,7 @@ required>*<br><br>
 required>*<br><br>
 
 <label for="website">Website: </label>
-<input type="text" id="website" name="website" placeholder="www.thejohnsite.com"
+<input type="url" id="website" name="website" placeholder="www.thejohnsite.com"
 ><br><br>
 
 <!-- TODO: Have a text box for Other & Validation for gender-->
@@ -56,6 +59,7 @@ you may opt out by ticking the boxes below:</h2> <br>
 <input type="checkbox" id="form3" name="register3" value="No">
 <label for="form3"> I do not wish to hear from you regarding registration forms about all-you-can-eat buffets</label><br><br>
 
+<!-- TODO: Add minimum and maximum values so textarea has a static size. -->
 <label for="comment">Additional comments: </label>
 <textarea name="comment" id="comment" rows="5" cols="40"> </textarea><br><br>
 
@@ -63,8 +67,9 @@ you may opt out by ticking the boxes below:</h2> <br>
 <!-- TODO: Remove in finished code -->
 <input type="submit" formnovalidate="formnovalidate"
   value="Submit without validation">
-
 </form>
+
+<!-- TODO: If there are no errors, redirect to second page -->
 
 </body>
 </html>
