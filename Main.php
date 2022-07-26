@@ -9,25 +9,31 @@
 <h1>Abstract Registration Form Ltd.</h1>
 
 <h2>Please input your details below:</h2>
+Fields with a * are required<br>
 <form action="Result.php" method="post">
 
 <label for="name">Name: </label>
-<input type="text" id="name" name="name"><br><br>
+<input type="text" id="name" name="name" placeholder="John Doe"
+required>*<br><br>
 
 <label for="date">Date of Birth:</label>
-<input type="date" id="date" name="date" min="1900-01-01" max="2021-12-31"><br><br>
+<input type="date" id="date" name="date" min="1900-01-01" max="2021-12-31"
+required>*<br><br>
 
 <label for="email">E-mail: </label>
-<input type="text" id="email" name="email"><br><br>
+<input type="email" id="email" name="email" placeholder="slickjohn@email.com"
+required>*<br><br>
 
 <label for="website">Website: </label>
-<input type="text" id="website" name="website"><br><br>
+<input type="text" id="website" name="website" placeholder="www.thejohnsite.com"
+><br><br>
 
-<!-- TODO: Have a text box for Other-->
+<!-- TODO: Have a text box for Other & Validation for gender-->
 Gender:
   <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
   <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
-  <input type="radio" id="other" name="gender" value="other"><label for="other">Other</label><br><br>
+  <input type="radio" id="other" name="gender" value="other"><label for="other">Other</label>
+  *<br><br>
 
 <label for="time">Favourite time of the day:</label>
 <input type="time" id="time" name="time"> <br><br>
@@ -36,10 +42,10 @@ Gender:
 <select id="pet" name="pet">
   <option value="Cats">Cats</option>
   <option value="Dogs">Dogs</option>
-</select> <br><br>
+</select>* <br><br>
 
 <h2>From time to time, we may wish to contact you about
-further menial registration forms
+further mundane registration forms
 to fill out. If you do not wish to hear from us about these forms,
 you may opt out by ticking the boxes below:</h2> <br>
 <input type="checkbox" id="form1" name="register1" value="No">
