@@ -1,6 +1,7 @@
-
-body {background-color:#E8D3B9;}
+/*body {background-color:#E8D3B9;}*/
+body {background-color:LightGoldenRodYellow;}
 h1 {text-align: center;}
+form {background-color:LightYellow ; border:5px outset;}
 textarea {resize: none;}
 
 .error {color: #FF0000;}

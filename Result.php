@@ -7,7 +7,7 @@ session_start();
 <link rel="stylesheet" href="FormStyle.css">
 <style></style>
 </head>
-<body style="background-color:#E8D3B9;">
+<body>
 <h1>Abstract Registration Form Ltd.</h1>
 
 <h2>Thank you for registering!</h2>
@@ -20,7 +20,7 @@ if ($_SESSION["website"] != "")
 echo "Your gender is: " . $_SESSION["gender"] . " <br>";
 if ($_SESSION["time"] != "")
   echo "Your favourite time of the day is: " . $_SESSION["time"] . " <br>";
-echo "You like " . $_SESSION["pet"] . " <br>";
+echo "You are a " . $_SESSION["pet"] . " person!<br>";
 
 echo "You have opted into:<br>";
 

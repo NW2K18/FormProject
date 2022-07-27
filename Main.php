@@ -7,7 +7,7 @@ session_start();
 <link rel="stylesheet" href="FormStyle.css">
 <style></style>
 </head>
-<body">
+<body>
 
 <?php
 // session_start();
@@ -74,7 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($nameErr == "" && $dateErr == "" && $emailErr == "" && $websiteErr == "" && $genderErr == "" && $petErr == "") {
-   // TODO: Put the Header in here once it is fixed.
    header("Location: Result.php");
    exit;
   }
@@ -131,10 +130,10 @@ Gender:
 <label for="pet">Cats or Dogs?</label>
 <select id="pet" name="pet">
   <option value=""></option>
-  <option value="Cats"
-    <?php if (isset($pet) && $pet=="Cats") echo "selected";?>>Cats</option>
-  <option value="Dogs"
-    <?php if (isset($pet) && $pet=="Dogs") echo "selected";?>>Dogs</option>
+  <option value="cat"
+    <?php if (isset($pet) && $pet=="cat") echo "selected";?>>Cats</option>
+  <option value="dog"
+    <?php if (isset($pet) && $pet=="dog") echo "selected";?>>Dogs</option>
 </select><span class="error"> * <?php echo $petErr;?></span><br><br>
 
 <h2>From time to time, we may wish to contact you about
