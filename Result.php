@@ -13,8 +13,8 @@ session_start();
 <h2>Thank you for registering!</h2>
 <?php
 echo "Your name is: " . $_SESSION["name"] . " <br>";
-echo "Your email address is: " . $_SESSION["email"] . " <br>";
 echo "Your date of birth is: " . $_SESSION["date"] . " <br>";
+echo "Your email address is: " . $_SESSION["email"] . " <br>";
 if ($_SESSION["website"] != "")
   echo "Your website is: " . $_SESSION["website"] . " <br>";
 echo "Your gender is: " . $_SESSION["gender"] . " <br>";
