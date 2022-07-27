@@ -99,7 +99,7 @@ function test_input($data) {
 
 <h1>Abstract Registration Form Ltd.</h1>
 <h2>Please input your details below:</h2>
-<span class="error">Fields with a * are required</span><br>
+<span class="error">Fields with a * are required</span><br><br>
 <!-- Form starts here -->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 

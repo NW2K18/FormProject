@@ -9,9 +9,8 @@ session_start();
 <h1>Abstract Registration Form Ltd.</h1>
 
 <h2>Thank you for registering!</h2>
-<?php //foreach ($_SESSION as $parm => $value)  echo "$parm = '$value'\n"; ?>
 <?php
-echo "Welcome " . $_SESSION["name"] . " <br>";
+echo "Your name is: " . $_SESSION["name"] . " <br>";
 echo "Your email address is: " . $_SESSION["email"] . " <br>";
 echo "Your date of birth is: " . $_SESSION["date"] . " <br>";
 if ($_SESSION["website"] != "")
