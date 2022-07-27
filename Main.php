@@ -79,13 +79,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($nameErr == "" && $dateErr == "" && $emailErr == "" && $websiteErr == "" && $genderErr == "" && $petErr == "") {
    // TODO: Put the Header in here once it is fixed.
-   //header("Location: Result.php");
-   //exit;
+   header("Location: Result.php");
+   exit;
   }
 
   // TODO: Remove when not debugging.
-  header("Location: Result.php");
-  exit;
+  //header("Location: Result.php");
+  //exit;
 
 }
 
