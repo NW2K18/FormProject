@@ -4,14 +4,10 @@ session_start();
 <html>
 <head>
 <title>Registration Form</title>
-<style>
-.error {color: #FF0000;}
-textarea {
-  resize: none;
-}
-</style>
+<link rel="stylesheet" href="FormStyle.css">
+<style></style>
 </head>
-<body style="background-color:#E8D3B9;">
+<body">
 
 <?php
 // session_start();

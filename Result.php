@@ -4,6 +4,8 @@ session_start();
 <html>
 <head>
 <title>Thank you for registering!</title>
+<link rel="stylesheet" href="FormStyle.css">
+<style></style>
 </head>
 <body style="background-color:#E8D3B9;">
 <h1>Abstract Registration Form Ltd.</h1>
