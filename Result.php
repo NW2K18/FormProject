@@ -10,28 +10,32 @@ session_start();
 
 <h2>Thank you for registering!</h2>
 <?php //foreach ($_SESSION as $parm => $value)  echo "$parm = '$value'\n"; ?>
-Welcome <?php echo $_SESSION["name"]; ?><br>
-Your email address is: <?php echo $_SESSION["email"]; ?><br>
-Your date of birth is: <?php echo $_SESSION["date"]; ?><br>
-Your website is: <?php echo $_SESSION["website"]; ?><br>
-Your gender is: <?php echo $_SESSION["gender"]; ?><br>
-Your favourite time of the day is: <?php echo $_SESSION["time"]; ?><br>
-You like <?php echo $_SESSION["pet"]; ?>!<br>
-<!-- TODO: Output this data type more specifically. -->
-You have opted into:<br>
 <?php
-if (isset($_SESSION["register1"]) && $_SESSION["register1"] == "No") {echo "";}
-  else {echo "Forms about mountain climbing";}
-  echo "<br>";
+echo "Welcome " . $_SESSION["name"] . " <br>";
+echo "Your email address is: " . $_SESSION["email"] . " <br>";
+echo "Your date of birth is: " . $_SESSION["date"] . " <br>";
+if ($_SESSION["website"] != "")
+  echo "Your website is: " . $_SESSION["website"] . " <br>";
+echo "Your gender is: " . $_SESSION["gender"] . " <br>";
+if ($_SESSION["time"] != "")
+  echo "Your favourite time of the day is: " . $_SESSION["time"] . " <br>";
+echo "You like " . $_SESSION["pet"] . " <br>";
+
+echo "You have opted into:<br>";
+
+if (!isset($_SESSION["register1"]) && $_SESSION["register1"] == "No") {echo "";}
+  else {echo "Forms about mountain climbing"; echo "<br>";}
 if (isset($_SESSION["register2"]) && $_SESSION["register2"] == "No") {echo "";}
-  else {echo "Forms about new video games";}
-  echo "<br>";
+  else {echo "Forms about new video games"; echo "<br>";}
 if (isset($_SESSION["register3"]) && $_SESSION["register3"] == "No") {echo "";}
-  else {echo "Forms about all-you-can-eat buffets";}
-  echo "<br>";
+  else {echo "Forms about all-you-can-eat buffets"; echo "<br>";}
+
+echo "<br>";
+
+if ($_SESSION["comment"] != "")
+  echo "Additional comments: " . $_SESSION["comment"] . " <br>";
 ?>
 <br>
-Additional comments: <?php echo $_SESSION["comment"]; ?><br>
 
 </body>
 </html>

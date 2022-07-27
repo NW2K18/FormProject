@@ -6,6 +6,9 @@ session_start();
 <title>Registration Form</title>
 <style>
 .error {color: #FF0000;}
+textarea {
+  resize: none;
+}
 </style>
 </head>
 <body style="background-color:#E8D3B9;">
@@ -76,9 +79,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($nameErr == "" && $dateErr == "" && $emailErr == "" && $websiteErr == "" && $genderErr == "" && $petErr == "") {
    // TODO: Put the Header in here once it is fixed.
+   //header("Location: Result.php");
+   //exit;
   }
 
-  // TODO: Redirect to next page with relevant data.
+  // TODO: Remove when not debugging.
   header("Location: Result.php");
   exit;
 
@@ -148,7 +153,6 @@ you may opt out by ticking the boxes below:</h2> <br>
 <input type="checkbox" id="form3" name="register3" value="No">
 <label for="form3"> I do not wish to hear from you regarding registration forms about all-you-can-eat buffets</label><br><br>
 
-<!-- TODO: Add minimum and maximum values so textarea has a static size. -->
 <label for="comment">Additional comments: </label>
 <textarea name="comment" id="comment" rows="5" cols="40">
 <?php echo $comment;?></textarea><br><br>
