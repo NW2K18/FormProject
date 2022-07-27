@@ -132,7 +132,6 @@ Gender:
 <label for="time">Favourite time of the day:</label>
 <input type="time" id="time" name="time" value="<?php echo $time;?>"> <br><br>
 
-<!-- TODO: Save value upon validation. -->
 <label for="pet">Cats or Dogs?</label>
 <select id="pet" name="pet">
   <option value=""></option>

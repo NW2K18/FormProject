@@ -23,7 +23,7 @@ echo "You like " . $_SESSION["pet"] . " <br>";
 
 echo "You have opted into:<br>";
 
-if (!isset($_SESSION["register1"]) && $_SESSION["register1"] == "No") {echo "";}
+if (isset($_SESSION["register1"]) && $_SESSION["register1"] == "No") {echo "";}
   else {echo "Forms about mountain climbing"; echo "<br>";}
 if (isset($_SESSION["register2"]) && $_SESSION["register2"] == "No") {echo "";}
   else {echo "Forms about new video games"; echo "<br>";}
@@ -35,7 +35,6 @@ echo "<br>";
 if ($_SESSION["comment"] != "")
   echo "Additional comments: " . $_SESSION["comment"] . " <br>";
 ?>
-<br>
 
 </body>
 </html>
