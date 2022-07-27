@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <head>
 <title>Registration Form</title>
@@ -15,10 +18,12 @@ $name = $date = $email = $website = $gender = $time = $pet = $comment = "";
 
 // Do this when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $_SESSION = $_POST;
+
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
   } else {
-    $name = test_input($_POST["name"]);
+    $_SESSION["name"] = $name = test_input($_POST["name"]);
     // Check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
       $nameErr = "Only letters and white space allowed";
@@ -28,13 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["date"])) {
     $dateErr = "Date is required";
   } else {
-    $date = $_POST["date"];
+    $_SESSION["date"] = $date = $_POST["date"];
   }
 
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
   } else {
-    $email = test_input($_POST["email"]);
+    $_SESSION["email"] = $email = test_input($_POST["email"]);
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format";
@@ -42,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (!empty($_POST["website"])) {
-    $website = test_input($_POST["website"]);
+    $_SESSION["website"] = $website = test_input($_POST["website"]);
     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
     if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
       $websiteErr = "Invalid URL";
@@ -52,31 +57,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["gender"])) {
     $genderErr = "Gender is required";
   } else {
-    $gender = test_input($_POST["gender"]);
+    $_SESSION["gender"] = $gender = test_input($_POST["gender"]);
   }
 
   if (!empty($_POST["time"])) {
-    $time = $_POST["time"];
+    $_SESSION["time"] = $time = $_POST["time"];
   }
 
   if (empty($_POST["pet"])) {
     $petErr = "Favourite animal is required";
   } else {
-    $pet = test_input($_POST["pet"]);
+    $_SESSION["pet"] = $pet = test_input($_POST["pet"]);
   }
 
   if (!empty($_POST["comment"])) {
-    $comment = test_input($_POST["comment"]);
+    $_SESSION["comment"] = $comment = test_input($_POST["comment"]);
   }
 
   if ($nameErr == "" && $dateErr == "" && $emailErr == "" && $websiteErr == "" && $genderErr == "" && $petErr == "") {
-   //<meta http-equiv="Refresh" content="0; url='Result.php'" />
    // TODO: Put the Header in here once it is fixed.
   }
 
   // TODO: Redirect to next page with relevant data.
-  //header("Location: Result.php");
-   //exit;
+  header("Location: Result.php");
+  exit;
 
 }
 
@@ -103,11 +107,11 @@ function test_input($data) {
 <span class="error">* <?php echo $dateErr;?></span><br><br>
 
 <label for="email">E-mail: </label>
-<input type="email" id="email" name="email" value="<?php echo $email;?>" placeholder="slickjohn@email.com">
+<input type="text" id="email" name="email" value="<?php echo $email;?>" placeholder="slickjohn@email.com">
 <span class="error">* <?php echo $emailErr;?></span><br><br>
 
 <label for="website">Website: </label>
-<input type="url" id="website" name="website" value="<?php echo $website;?>" placeholder="www.thejohnsite.com">
+<input type="text" id="website" name="website" value="<?php echo $website;?>" placeholder="www.thejohnsite.com">
 <span class="error"><?php echo $websiteErr;?></span><br><br>
 
 <!-- TODO: Have a text box for Other -->
@@ -150,9 +154,6 @@ you may opt out by ticking the boxes below:</h2> <br>
 <?php echo $comment;?></textarea><br><br>
 
 <input type="submit">
-<!-- TODO: Remove in finished code -->
-<input type="submit" formnovalidate="formnovalidate"
-  value="Submit without validation">
 </form>
 
 </body>
