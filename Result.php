@@ -22,7 +22,8 @@ if ($_SESSION["time"] != "")
   echo "Your favourite time of the day is: " . $_SESSION["time"] . " <br>";
 echo "You are a " . $_SESSION["pet"] . " person!<br>";
 
-echo "You have opted into:<br>";
+if (!isset($_SESSION["register1"]) || !isset($_SESSION["register2"]) || !isset($_SESSION["register3"]))
+  echo "You have opted into:<br>";
 
 if (isset($_SESSION["register1"]) && $_SESSION["register1"] == "No") {echo "";}
   else {echo "Forms about mountain climbing"; echo "<br>";}
