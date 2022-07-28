@@ -11,9 +11,9 @@ session_start();
 <h1>Abstract Registration Form Ltd.</h1>
 <?php
 if ($_SESSION["pet"] == "cat")
-  echo "<div class=\"center\"><img src=\"catcomp.jpg\" alt=\"Cat on a computer\"></div>";
+  echo "<div class=\"center\"><img src=\"catcomp.png\" alt=\"Cat on a computer\"></div>";
 if ($_SESSION["pet"] == "dog")
-  echo "<div class=\"center\"><img src=\"dogcomp.jpg\" alt=\"Dog on a computer\"></div>";
+  echo "<div class=\"center\"><img src=\"dogcomp.png\" alt=\"Dog on a computer\"></div>";
 ?>
 
 <h2>Thank you for registering!</h2>
