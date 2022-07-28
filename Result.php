@@ -9,6 +9,12 @@ session_start();
 </head>
 <body>
 <h1>Abstract Registration Form Ltd.</h1>
+<?php
+if ($_SESSION["pet"] == "cat")
+  echo "<div class=\"center\"><img src=\"catcomp.jpg\" alt=\"Cat on a computer\"></div>";
+if ($_SESSION["pet"] == "dog")
+  echo "<div class=\"center\"><img src=\"dogcomp.jpg\" alt=\"Dog on a computer\"></div>";
+?>
 
 <h2>Thank you for registering!</h2>
 <?php
@@ -23,14 +29,14 @@ if ($_SESSION["time"] != "")
 echo "You are a " . $_SESSION["pet"] . " person!<br>";
 
 if (!isset($_SESSION["register1"]) || !isset($_SESSION["register2"]) || !isset($_SESSION["register3"]))
-  echo "You have opted into:<br>";
+  echo "<h3>You have opted into:</h3><br>";
 
 if (isset($_SESSION["register1"]) && $_SESSION["register1"] == "No") {echo "";}
-  else {echo "Forms about mountain climbing"; echo "<br>";}
+  else {echo "<b>Forms about mountain climbing</b>"; echo "<br>";}
 if (isset($_SESSION["register2"]) && $_SESSION["register2"] == "No") {echo "";}
-  else {echo "Forms about new video games"; echo "<br>";}
+  else {echo "<b>Forms about new video games</b>"; echo "<br>";}
 if (isset($_SESSION["register3"]) && $_SESSION["register3"] == "No") {echo "";}
-  else {echo "Forms about all-you-can-eat buffets"; echo "<br>";}
+  else {echo "<b>Forms about all-you-can-eat buffets</b></b>"; echo "<br>";}
 
 echo "<br>";
 

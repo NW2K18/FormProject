@@ -1,7 +1,30 @@
 /*body {background-color:#E8D3B9;}*/
-body {background-color:LightGoldenRodYellow;}
-h1 {text-align: center;}
-form {background-color:LightYellow ; border:5px outset;}
-textarea {resize: none;}
+body {
+  background-color:LightGoldenRodYellow;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+form {background-color:LightYellow;
+  border:5px outset;
+  margin-left: 50px;
+}
+textarea {
+  resize: none;
+}
 
-.error {color: #FF0000;}
+.errormain {
+  color: #FF0000;
+  text-align: center;
+}
+.error {
+  color: #FF0000;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+}

@@ -10,7 +10,6 @@ session_start();
 <body>
 
 <?php
-// session_start();
 // Define variables and set to empty values
 $nameErr = $dateErr = $emailErr = $websiteErr = $genderErr = $petErr = "";
 $name = $date = $email = $website = $gender = $time = $pet = $comment = "";
@@ -93,8 +92,9 @@ function test_input($data) {
 ?>
 
 <h1>Abstract Registration Form Ltd.</h1>
+<div class="center"><img src="catdog.png" alt="Cat and a dog."></div>
 <h2>Please input your details below:</h2>
-<span class="error">Fields with a * are required</span><br><br>
+<div class="errormain">Fields with a * are required</div><br><br>
 <!-- Form starts here -->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
